@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeMyPlanner</title>
+  <link rel="icon" href="baner/favi.png" type="image/x-icon">
+  <link rel="stylesheet" href="styl.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+</head>
+<body id="top">
+    <header class="top-bar">
+        <div class="baner-bar">
+       <img  src="baner/baner.png" alt="BeMyPlanner Banner" class="baner"> 
+       </div>
+       <h1>Українська версія поки без перекладу</h1>
+    </header>
+    <nav class="menu">
+                   <a href="#about-me">O mnie</a>
+                    <a href="#offer">Oferta</a>
+                    <a href="#how-i-work">Współpraca</a>
+                    <a href="#realizacje">Inspiracje</a>
+                    <a href="#Kontakt">Kontakt</a>
+                    <a href="https://www.instagram.com/bemyplanner.wedding/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+  <i class="fab fa-instagram" aria-hidden="true"></i>
+</a>
+<a href="https://www.threads.com/@bemyplanner.wedding?hl=en" target="_blank" rel="noopener noreferrer" class="threads-link">
+  <i class="fab fa-threads" aria-hidden="true"></i>
+</a>
+                    <div class="lang-menu">
+  <div class="selected-lang">
+    <img src="flags/ukr.webp" alt="UKR">
+  </div>
+
+  <ul>
+    <li>
+      <a href="index.html">
+        <img src="flags/pol.png" alt="POL">
+      </a>
+    </li>
+    <li>
+      <a href="bemyplanner(ukr).html">
+        <img src="flags/ukr.webp" alt="UKR">
+      </a>
+    </li>
+    <li>
+      <a href="bemyplanner(eng).html">
+        <img src="flags/eng.png" alt="EN">
+      </a>
+    </li>
+  </ul>
+</div>
+         </nav>
+
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>BeMyPlanner</h1>
+                <h3>Styl, jakośći subtelne nuty luksusu, które tworzą niezapomniane chwile</h3>
+
+
+
+
+
+               <div class="slider">
+
+    <!-- Предыдущее фото -->
+    <img id="prevImage" class="side-image" src="" alt="prev">
+
+    <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+
+    <!-- Центральное фото -->
+    <img id="sliderImage" class="main-image" src="photo/1.JPG" alt="BeMyPlanner">
+
+    <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+
+    <!-- Следующее фото -->
+    <img id="nextImage" class="side-image" src="" alt="next">
+
+  </div>
+
+  <script>
+    const images = [
+      "photo/9.JPG",
+      "photo/1.JPG",
+      "photo/10.jpeg",
+      "photo/3.JPG"
+    ];
+
+    let index = 0;
+
+    const mainImg = document.getElementById("sliderImage");
+    const prevImg = document.getElementById("prevImage");
+    const nextImg = document.getElementById("nextImage");
+
+    function updateImages() {
+      const prevIndex = (index - 1 + images.length) % images.length;
+      const nextIndex = (index + 1) % images.length;
+
+      prevImg.src = images[prevIndex];
+      mainImg.src = images[index];
+      nextImg.src = images[nextIndex];
+    }
+
+    function fadeChange(newIndex) {
+      mainImg.classList.add("fade-out");
+
+      setTimeout(() => {
+        index = newIndex;
+        updateImages();
+        mainImg.classList.remove("fade-out");
+      }, 300);
+    }
+
+    function nextSlide() {
+      fadeChange((index + 1) % images.length);
+    }
+
+    function prevSlide() {
+      fadeChange((index - 1 + images.length) % images.length);
+    }
+
+    updateImages();
+  </script>
+
+
+
+
+
+               <p class="tekst1">Tworzę wyjątkowe wydarzenia dopasowane do Waszych marzeń i potrzeb.<br>
+
+                Dbam o detale, atmosferę i spokój w dniu, który ma znaczenie. <br>
+
+                Ty celebrujesz — ja planuję.</p>
+
+            </div>
+        </section>
+  
+        <section class="about">
+            <h2 id="about-me" class="about-text" >O mnie</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="baner/portret.jpg" alt="BeMyPlanner Photo">
+                </div>
+                    </div>
+                    <div class="about-text">
+                  <p><b>By My Planner: </b> powstało z miłości do pięknych chwil i potrzeby tworzenia wydarzeń, które naprawdę mają znaczenie. Tak naprawdę wszystko zaczęło się jeszcze wcześniej — od pomocy przy organizacji ślubu mojego kuzyna. To wtedy po raz pierwszy odkryłam, jak wiele radości daje mi wspieranie bliskich w tak ważnych momentach i dbanie o to, by każdy detal był dokładnie tam, gdzie powinien.
+Moja historia na dobre nabrała tempa podczas organizacji własnego wesela. To właśnie wtedy zrozumiałam, jak ogromną satysfakcję daje mi planowanie, dopracowywanie detali i tworzenie atmosfery, w której inni mogą po prostu być—obecni, spokojni i szczęśliwi.
+Od tamtej pory wiem, że to właśnie jest moja droga.
+Mam polsko-ukraińskie korzenie i od ponad 10 lat mieszkam w Polsce. Pracuję w trzech językach: polskim, angielskim i ukraińskim.
+
+</p>
+</div>
+
+<div class="about-text">
+<p>Dzięki temu naturalnie łączę różne kultury, tradycje i oczekiwania, tworząc wydarzenia dopasowane do międzynarodowych par. Doskonale rozumiem
+oczekiwania, tworząc wydarzenia dopasowane do międzynarodowych par. Doskonale rozumiem zarówno polskie, jak i ukraińskie obyczaje, co pozwala mi działać swobodnie i z pełnym wyczuciem.
+Posiadam również praktyczną wiedzę dotyczącą procesów formalnych i dokumentacyjnych, w tym procedur związanych z zawarciem ślubu w Polsce przez cudzoziemców, dzięki czemu mogę realnie wspierać pary nie tylko organizacyjnie, ale i praktycznie.
+Jestem osobą kreatywną, wrażliwą na estetykę i detale — to one tworzą spójną całość i nadają wydarzeniom charakter. W swojej pracy stawiam na elegancję, subtelność i nowoczesną prostotę.
+Działam z sercem, uważnością i spokojem — abyście w dniu swojego wydarzenia mogli skupić się na emocjach, nie na organizacji.
+</p>
+</div>
+        </section>
+        <section class="offer">
+            <h2 id="offer" class="offer-text">Oferta</h2>
+            <div class="offer-text">
+                <p>Specjalizuję się głównie w organizacji wesel, ale z przyjemnością tworzę również inne wyjątkowe wydarzenia</p><br>
+            </div>
+            
+<div class="flip-grid">
+  <div class="flip-card">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <img src="oferta/Wesele.png" alt="photo-wesele">
+      </div>
+      <div class="flip-back">
+        <img src="oferta/wesele tył.png" alt="photo-wesele">
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <img src="oferta/eventy prywatne.png" alt="photo-eventy-prywatne">
+      </div>
+      <div class="flip-back">
+        <img src="oferta/eventy prywatne  tył.png" alt="photo-eventy-prywatne">
+      </div>
+    </div>
+  </div>
+  <div class="flip-card">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <img src="oferta/eventy firmowe.png" alt="photo-eventy-firmowe">
+      </div>
+      <div class="flip-back">
+        <img src="oferta/eventy firmowe tył.png" alt="photo-eventy-firmowe">
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <img src="oferta/dod. wsp.png" alt="photo-dod-wsp">
+      </div>
+      <div class="flip-back">
+        <img src="oferta/dod. wsp tył.png" alt="photo-dod-wsp">
+      </div>
+    </div>
+  </div>
+</div>
+            <div class="offer-text">
+                <p>Działam na terenie Katowic, Śląska, całej Polski, a także za granicą — z możliwością dojazdu i pełnej organizacji na miejscu.
+Każda oferta jest indywidualnie dopasowana — bo każde wydarzenie zasługuje na własną historię.</p>
+            </div>
+            
+        </section>
+        <section class="how-i-work">
+            <h2 id="how-i-work" class="how-i-work">Jak wygląda współpraca</h2>
+            <div class="step">
+                <div class="step-item">
+                    <div class="step-image"><img src="wspolpraca/1. jak wyglada wspolpraca - pierwsze spotkanie.png" alt="BeMyPlanner Photo"></div>
+                    <div class="step-text"><h3>Pierwsza rozmowa</h3><br>
+                    <p>Zaczynamy od spokojnej, niezobowiązującej rozmowy — online lub na żywo.
+Chcę poznać Was, Waszą historię, potrzeby oraz wyobrażenie o wydarzeniu.
+To moment na pytania, inspiracje i sprawdzenie, czy dobrze się rozumiemy.</p></div>
+                </div>
+                <div class="step-item reverse">
+                    <div class="step-image"><img src="wspolpraca/2 jak wyglada wspolpraca - indywidualna propozycja.png" alt="BeMyPlanner Photo"></div>
+                    <div class="step-text"><h3>Indywidualna propozycja współpracy</h3><br>
+                    <p>Na podstawie rozmowy przygotowuję dopasowaną ofertę.
+Zawiera ona zakres moich działań, sposób współpracy oraz wycenę — wszystko jasno i przejrzyście.</p></div>
+
+                </div>
+                <div class="step-item">
+                    <div class="step-image"><img src="wspolpraca/3 jak wyglada wspolpraca -umowa i start działań.png" alt="BeMyPlanner Photo"></div>
+                    <div class="step-text"><h3>Formalności i start działań</h3><br>
+                    <p>Po akceptacji oferty podpisujemy umowę, która zabezpiecza obie strony i porządkuje zasady współpracy.
+Od tego momentu biorę organizację w swoje ręce.</p></div>
+                </div>
+                <div class="step-item reverse">
+                    <div class="step-image"><img src="wspolpraca/4 jak wyglada wspolpraca - koncepcja i organizacja.PNG" alt="BeMyPlanner Photo"></div>
+                    <div class="step-text"><h3>Koncepcja i organizacja</h3><br>
+                    <p>Tworzę plan działania — budżet, harmonogram i spójną koncepcję wydarzenia.
+Dobieram sprawdzonych wykonawców, koordynuję kolejne etapy i dbam o każdy detal.
+Jesteśmy w stałym kontakcie, a Wy na bieżąco macie pełen obraz postępów.</p></div>
+                </div>
+                <div class="step-item">
+                    <div class="step-image"><img src="wspolpraca/6.1  jak wyglada wspolpraca - po wydarzeniu.png" alt="BeMyPlanner Photo"></div>
+                    <div class="step-text"><h3>Koordynacja wydarzenia</h3><br>
+                        <p>W dniu wydarzenia czuwam nad przebiegiem całości — realizacją harmonogramu, współpracą z podwykonawcami i atmosferą spokoju.
+Jestem obecna tam, gdzie trzeba, reaguję zanim pojawi się problem i zdejmuję z Was wszystkie obowiązki.</p><br>
+<q>
+                    Ty celebrujesz.<br>
+                    Ja planuję.        
+                </q></div>
+                </div>
+                </div>
+          </section>      
+        <section class="realizations">
+            <h2 id="realizacje" class="realizacje">Inspiracje i realizacje</h2>
+            <div class="gallery">
+                <img src="photo/0.jpeg" alt="BeMyPlanner Photo">
+                <img src="photo/7.JPG" alt="BeMyPlanner Photo">
+                <img src="photo/26.jpeg" alt="BeMyPlanner Photo">
+                <img src="photo/67.JPG" alt="BeMyPlanner Photo">
+            </div>
+                 
+            <div class="realizacje">
+                  <a href="galeria(ukr).html" class="button">Zobacz więcej</a>
+                <p>Każde wydarzenie to osobna historia, emocje i detale.
+W tej przestrzeni dzielę się inspiracjami, stylami oraz wybranymi realizacjami — od kameralnych przyjęć po większe projekty, które pokazują moje podejście do planowania i estetyki.
+To miejsce tworzone z myślą o parach i klientach, którzy cenią elegancję, harmonię i subtelne piękno</p>
+            </div>
+         </section>
+         <section class="how-i-work">
+   <div class="contact">
+    <h2 id="Kontakt">Kontakt</h2>
+    <p>Jeśli marzysz o wyjątkowym weselu lub wydarzeniu — zapraszam do kontaktu.</p>
+ 
+    <ul>
+        <li>Zadzwoń: <b>+48534112378</b></li>
+        <li>Napisz do mnie maila: <a href="mailto:bemyplanner.events@gmail.com" class="mail">bemyplanner.events@gmail.com</a></li>
+    </ul>
+    <p>Znajdziesz mnie również na <a href="https://www.instagram.com/bemyplanner.wedding/" target="_blank" rel="noopener noreferrer" class="instagram-link">Instagramie</a>, gdzie dzielę się inspiracjami i kulisami mojej pracy.
+Razem stworzymy coś pięknego.</p>
+  </div>
+         </section>
+
+<footer >
+    <p><b>&copy; 2026 BeMyPlanner. Wszelkie prawa zastrzeżone.</b></p>
+    <a href="#top" class="footer">Powrót</a>
+    </footer>
+</body>
+</html>
